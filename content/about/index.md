@@ -62,7 +62,7 @@ Check out my **[projects]({{< ref "projects/index.md" >}})**
 
 {{< timeline >}}
 
-{{< timelineItem icon="gitlab" header="React Native Developer" badge="Jan. 2025 - Present" subheader="Remote" >}}
+{{< timelineItem icon="scale-balanced" header="React Native Developer" badge="Jan. 2025 - Present" subheader="Remote" >}}
 I'm currently working remotely as a React Native developer, building performant and scalable cross-platform mobile apps.
 
 <ul>
@@ -97,7 +97,7 @@ I worked as a front-end developer for various clients. I also upskilled to the f
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="fork" header="Graduated bootcamp" badge="Aug. 2022- Sept. 2023" subheader="Nairobi, KE" >}}
+{{< timelineItem icon="graduation-cap" header="Graduated bootcamp" badge="Aug. 2022- Sept. 2023" subheader="Nairobi, KE" >}}
 I graduated after 12 months of studying with ALX Africa, a project-based remote learning program emphasizing pair programming and hands-on mastery of HTML, CSS, C, JavaScript, Python, React, MySQL, and Nginx. Collaborating with developers across Africa strengthened my technical and teamwork skills.
 
 <ul>
