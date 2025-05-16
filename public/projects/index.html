@@ -101,7 +101,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "73"
+    "wordCount": "249"
   }]
   </script>
 
@@ -405,8 +405,6 @@
 
 
 
-  
-
 
 
 
@@ -423,8 +421,6 @@
 
 <div class="flex flex-row flex-wrap items-center">
   
-  
-  <span>73 words</span>
   
 
   
@@ -462,7 +458,81 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-restate">i. Restate</a></li>
+    <li><a href="#ii-bookwise">ii. Bookwise</a></li>
+    <li><a href="#iii-readblendr">iii. Readblendr</a></li>
+    <li><a href="#iv-snapvista">iv. Snapvista</a></li>
+    <li><a href="#v-evently">v. Evently</a></li>
+    <li><a href="#want-to-see-more-or-contribute">Want to see more or contribute?</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-restate">i. Restate</a></li>
+    <li><a href="#ii-bookwise">ii. Bookwise</a></li>
+    <li><a href="#iii-readblendr">iii. Readblendr</a></li>
+    <li><a href="#iv-snapvista">iv. Snapvista</a></li>
+    <li><a href="#v-evently">v. Evently</a></li>
+    <li><a href="#want-to-see-more-or-contribute">Want to see more or contribute?</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -470,28 +540,465 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>This section outlines some of the projects I have taken on my quest to constantly learn and upskill.</p>
-<table>
-    <thead>
-        <tr>
-            <th>Logo</th>
-            <th>Title</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-         <tr>
-            <td><img class="customEntitityAlbum" src="img/techmart.jpg"/></td>
-            <td><a target="_blank" href="https://techmart-alexotara.vercel.app/">TechMart</a></td>
-            <td>An Ecommerce application with the ability to add and edit products on the go using Sanity CMS, advanced cart functionalities and a payments functionality with Stripe.</td>
-        </tr>
-         <tr>
-            <td><img class="customEntitityAlbum" src="img/carhub.png"/></td>
-            <td><a target="_blank" href="https://carhub-alexotara.vercel.app/">CarHub</a></td>
-            <td>Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.</td>
-        </tr>
-    </tbody>
-</table>
+          <p>I&rsquo;ve embarked on numerous projects throughout the years but these listed below are held closer to my heart. Some of them are open-source and I would like to invite you to contribute to those that pique your interest. Your collaboration is highly appreciated!</p>
+
+
+<h2 class="relative group">i. Restate 
+    <div id="i-restate" class="anchor"></div>
+    
+</h2>
+<p>This is a full-stack Real Estate mobile app with React Native, featuring Google authentication, dynamic property listings, and user profiles. Designed with modern tools like Expo SDK 52, Appwrite, Tailwind CSS, and TypeScript for a seamless and scalable experience.</p>
+<div class="flex flex-wrap gap-4">
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Expo</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>TypeScript</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Google OAuth</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Appwrite</span>
+  </span>
+</span>
+</div>
+</div>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /projects/img/realestate_hu_9b59bd82463e3392.png 330w,
+        /projects/img/realestate_hu_9484c3da670531ef.png 660w,
+        /projects/img/realestate_hu_f273cd1c1b65d1de.png 1024w,
+        /projects/img/realestate_hu_a37101331620d81a.png 2x"
+        data-zoom-src="/projects/img/realestate_hu_a37101331620d81a.png"
+        src="/projects/img/realestate_hu_9484c3da670531ef.png"
+        alt="Abstract purple artwork"
+      />
+      <figcaption><a href="https://github.com/OtaraAlex/native_realestate" target="_blank">Live Link</a></figcaption>
+    </figure>
+</p>
+
+
+<h2 class="relative group">ii. Bookwise 
+    <div id="ii-bookwise" class="anchor"></div>
+    
+</h2>
+<p>Bookwise is a Library Management System featuring a public-facing app and an admin interface. It offers advanced functionalities like seamless book borrowing with reminders and receipts, robust user management, automated workflows, and a modern, optimized tech stack for real-world scalability.</p>
+<div class="flex flex-wrap gap-4">
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Next.js</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>TypeScript</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Resend</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Upstash Redis</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Drizzle ORM</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Neon Postgres</span>
+  </span>
+</span>
+</div>
+</div>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /projects/img/bookwise_hu_69515ab4d21b22a8.jpeg 330w,
+        /projects/img/bookwise_hu_b21a68f65db82155.jpeg 660w,
+        /projects/img/bookwise_hu_a6eb9e5a97d5b0f.jpeg 1024w,
+        /projects/img/bookwise_hu_7226c25bc31e0bdd.jpeg 2x"
+        data-zoom-src="/projects/img/bookwise_hu_7226c25bc31e0bdd.jpeg"
+        src="/projects/img/bookwise_hu_b21a68f65db82155.jpeg"
+        alt="Abstract purple artwork"
+      />
+      <figcaption><a href="https://weatbookwise.vercel.app/" target="_blank">Live Link</a></figcaption>
+    </figure>
+</p>
+
+
+<h2 class="relative group">iii. Readblendr 
+    <div id="iii-readblendr" class="anchor"></div>
+    
+</h2>
+<p>A platform for authors to publish and sell their books. It also acts as a marketplace for readers to buy and read.</p>
+<div class="flex flex-wrap gap-4">
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Next.js</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>TypeScript</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Tailwind</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>MongoDB</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Clerk</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Stripe</span>
+  </span>
+</span>
+</div>
+</div>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /projects/img/readblendr_hu_8f41c6af615a9222.jpeg 330w,
+        /projects/img/readblendr_hu_597975acd6f537f4.jpeg 660w,
+        /projects/img/readblendr_hu_1b1310a7e87c674a.jpeg 1024w,
+        /projects/img/readblendr_hu_9135db10d3018f59.jpeg 2x"
+        data-zoom-src="/projects/img/readblendr_hu_9135db10d3018f59.jpeg"
+        src="/projects/img/readblendr_hu_597975acd6f537f4.jpeg"
+        alt="Abstract purple artwork"
+      />
+      <figcaption><a href="https://readblendr.vercel.app" target="_blank">Live Link</a></figcaption>
+    </figure>
+</p>
+
+
+<h2 class="relative group">iv. Snapvista 
+    <div id="iv-snapvista" class="anchor"></div>
+    
+</h2>
+<p>A Software-as-a-Service application with AI features and a payments &amp; credits system where one can manipulate images.</p>
+<div class="flex flex-wrap gap-4">
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Next.js</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>TypeScript</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Tailwind</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>MongoDB</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Clerk</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Stripe</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Cloudinary AI</span>
+  </span>
+</span>
+</div>
+</div>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /projects/img/snapvista_hu_561f88ae406dd89f.jpeg 330w,
+        /projects/img/snapvista_hu_13a6a2d923083b7b.jpeg 660w,
+        /projects/img/snapvista_hu_ffc6d865adc11512.jpeg 1024w,
+        /projects/img/snapvista_hu_326ff78690bb12b3.jpeg 2x"
+        data-zoom-src="/projects/img/snapvista_hu_326ff78690bb12b3.jpeg"
+        src="/projects/img/snapvista_hu_13a6a2d923083b7b.jpeg"
+        alt="Abstract purple artwork"
+      />
+      <figcaption><a href="https://snapvistaa.vercel.app/" target="_blank">Live Link</a></figcaption>
+    </figure>
+</p>
+
+
+<h2 class="relative group">v. Evently 
+    <div id="v-evently" class="anchor"></div>
+    
+</h2>
+<p>An event management application where one can create and book events. Events are filtered by category.</p>
+<div class="flex flex-wrap gap-4">
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Next.js</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>TypeScript</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Tailwind</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>MongoDB</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Clerk</span>
+  </span>
+</span>
+</div>
+    
+<div class="flex mt-2">
+<span
+  class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal"
+>
+  <span class="flex flex-row items-center">
+    
+    <span>Stripe</span>
+  </span>
+</span>
+</div>
+</div>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /projects/img/evently_hu_fe11aea6f688a01c.jpeg 330w,
+        /projects/img/evently_hu_a2a606165a32f24e.jpeg 660w,
+        /projects/img/evently_hu_21cdb0a5fee383ae.jpeg 1024w,
+        /projects/img/evently_hu_7bf9cddc66d6ae3c.jpeg 2x"
+        data-zoom-src="/projects/img/evently_hu_7bf9cddc66d6ae3c.jpeg"
+        src="/projects/img/evently_hu_a2a606165a32f24e.jpeg"
+        alt="Abstract purple artwork"
+      />
+      <figcaption><a href="https://eventlyyy.vercel.app/" target="_blank">Live Link</a></figcaption>
+    </figure>
+</p>
+
+
+<h2 class="relative group">Want to see more or contribute? 
+    <div id="want-to-see-more-or-contribute" class="anchor"></div>
+    
+</h2>
+<p>Check out my projects and code on <strong><a href="https://github.com/OtaraAlex" target="_blank">GitHub</a></strong>.</p>
+<p>Let&rsquo;s build something together!</p>
+
           
           
           
