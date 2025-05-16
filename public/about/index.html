@@ -101,7 +101,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "215"
+    "wordCount": "531"
   }]
   </script>
 
@@ -160,8 +160,18 @@
 
 
 
+    
+    <script defer src="/lib/packery/packery.pkgd.min.js" integrity=""></script>
+
+    
+    
+    <script type="text/javascript" src="/js/shortcodes/gallery.min.9b4cb28f931ed922c26fb9b2510c2debb370f6a63305050c2af81740b2919883715e24efbbdf3a081496718ec751df3a72729d4d0bc71d6071297563a97ce1ee.js" integrity="sha512-m0yyj5Me2SLCb7myUQwt67Nw9qYzBQUMKvgXQLKRmINxXiTvu986CBSWcY7HUd86cnKdTQvHHWBxKXVjqXzh7g=="></script>
 
 
+
+
+
+<script defer src="/lib/tw-elements/index.min.js" integrity=""></script>
 
 
 
@@ -458,7 +468,79 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-i-do">What I do</a></li>
+    <li><a href="#my-skills">My Skills</a></li>
+    <li><a href="#my-certificates">My Certificates</a></li>
+    <li><a href="#work-experience">Work Experience</a></li>
+    <li><a href="#outside-of-tech">Outside of Tech</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-i-do">What I do</a></li>
+    <li><a href="#my-skills">My Skills</a></li>
+    <li><a href="#my-certificates">My Certificates</a></li>
+    <li><a href="#work-experience">Work Experience</a></li>
+    <li><a href="#outside-of-tech">Outside of Tech</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -466,7 +548,7 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>Hello 👋 I am a freelance Software Engineer and an Economics &amp; Statistics student, based in Nairobi, Kenya.</p>
+          <p>Hello 👋 I am a freelance Software Engineer and an Economics &amp; Statistics student, based in Kenya.</p>
 
 
 <h2 class="relative group">What I do 
@@ -479,8 +561,629 @@
     </span>        
     
 </h2>
-<p>I&rsquo;ve been actively shipping code for over three years. I primarily focus on front-end development, but ocassionally dabble in some full-stack development.</p>
-<p>Check out my <a href="https://www.alexotara.com/" target="_blank">portfolio</a></p>
+<p>I&rsquo;ve been actively shipping code for the past four years, specializing in Frontend and mobile development. Currently, I develop cross-platform mobile apps using React Native <strong>(<em>Expo</em>)</strong> and deliver full-stack web applications with React, Next.js, TypeScript, Tailwind, Prisma, Neon Serverless, MongoDB, and Appwrite.</p>
+<p>I enjoy turning complex problems into clean, scalable code and collaborating between design and engineering to deliver actual value. Whether it&rsquo;s a responsive web dashboard or a mobile-first product, I care about performance, usability, and lean architecture.</p>
+
+
+<h2 class="relative group">My Skills 
+    <div id="my-skills" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#my-skills" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<div id="gallery-2bc053111729a74bce2ff033e7cdfe90" class="gallery">
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+      
+      
+        
+        
+        
+      
+    
+  
+  
+  
+<div class="flex flex-wrap gap-4">
+  <img src="/about/img/html.svg" />
+  <img src="/about/img/css.svg" />
+  <img src="/about/img/sass.svg" />
+  <img src="/about/img/tailwindcss.svg" />
+  <img src="/about/img/javascript.svg" />
+  <img src="/about/img/typescript.svg" />
+  <img src="/about/img/nodejs.svg" />
+  <img src="/about/img/nextjs.svg" />
+  <img src="/about/img/react.svg" />
+  <img src="/about/img/express.svg" />
+  <img src="/about/img/mongodb.svg" />
+  <img src="/about/img/git.svg" />
+  <img src="/about/img/github.svg" />
+  <img src="/about/img/redux.svg" />
+  <img src="/about/img/motion.svg" />
+  <img src="/about/img/mui.svg" />
+</div>
+
+</div>
+
+
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
+  >
+
+  <span
+    
+      class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
+    >
+
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+<path fill="currentColor"  d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+  </span>
+
+
+  </span>
+
+  <span
+    
+      class="dark:text-neutral-300"
+    >Check out my <strong><a href="http://localhost:1313/projects/" target="_blank">projects</a></strong></span>
+</div>
+
+
+
+<h2 class="relative group">My Certificates 
+    <div id="my-certificates" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#my-certificates" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<figure>
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /about/img/se_hu_cf818f759ebac287.png 330w,
+          /about/img/se_hu_550ab4067d24f88d.png 660w,
+          /about/img/se_hu_49be21ee36a73727.png 1024w,
+          /about/img/se_hu_2cc8c21e743329ac.png 2x"
+          src="/about/img/se_hu_550ab4067d24f88d.png"
+          data-zoom-src="/about/img/se_hu_2cc8c21e743329ac.png"
+          alt="Alex Mbeche certificate for Short Specializations"
+        />
+  <figcaption>Software Engineering <a href="https://savanna.alxafrica.com/certificates/ERXCf5h8H6" target="_blank">Certificate</a></figcaption>
+  
+  </figure>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /about/img/ai-starter-kit_hu_fdf8b06bdaf3deba.png 330w,
+        /about/img/ai-starter-kit_hu_db4ac58d914c1744.png 660w,
+        /about/img/ai-starter-kit_hu_9dbb16dbfeccc40c.png 1024w,
+        /about/img/ai-starter-kit_hu_2273abf745640203.png 2x"
+        data-zoom-src="/about/img/ai-starter-kit_hu_2273abf745640203.png"
+        src="/about/img/ai-starter-kit_hu_db4ac58d914c1744.png"
+        alt="Abstract purple artwork"
+      />
+      <figcaption>AI Starter Kit <a href="https://savanna.alxafrica.com/certificates/Mn3hfxPem7" target="_blank">Certificate</a></figcaption>
+    </figure>
+</p>
+
+
+<h2 class="relative group">Work Experience 
+    <div id="work-experience" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#work-experience" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ol class="border-l-2 border-primary-500 dark:border-primary-300 list-none">
+
+
+
+
+
+<li>
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M510.486,284.482l-27.262-83.963c.012.038.016.077.028.115-.013-.044-.021-.088-.033-.132v-.01L429.1,33.871a21.328,21.328,0,0,0-20.445-14.6A21.038,21.038,0,0,0,388.466,34L337.094,192.154H175L123.533,33.989A21.033,21.033,0,0,0,103.35,19.274h-.113A21.467,21.467,0,0,0,82.86,34L28.888,200.475l-.008.021v0c-.013.042-.019.084-.033.127.012-.038.017-.077.029-.115L1.514,284.482a30.6,30.6,0,0,0,11.117,34.283L248.893,490.427c.035.026.074.041.109.067.1.072.2.146.3.214-.1-.065-.187-.136-.282-.2l0,0c.015.012.033.02.05.031s.027.015.041.024l.006,0a11.992,11.992,0,0,0,1.137.7c.054.03.1.068.157.1l0,0c.033.016.064.038.1.054s.053.02.077.032.038.015.056.023c.044.021.092.034.136.057.205.1.421.178.633.264.2.082.389.177.592.248l.025.011c.034.012.064.028.1.04s.083.032.125.046l.05.012c.053.016.11.024.163.039.019.006.042.009.063.015.284.086.579.148.872.213.115.026.225.062.341.083.017,0,.032.009.05.012.038.008.073.021.112.027.062.011.122.031.186.04.049.007.1,0,.151.012h.033a11.918,11.918,0,0,0,1.7.136h.019a11.971,11.971,0,0,0,1.7-.136h.033c.05-.008.1,0,.153-.012s.124-.029.187-.04c.038-.006.073-.019.11-.027.017,0,.032-.009.049-.012.118-.023.231-.059.349-.084.288-.064.578-.126.861-.21.019-.006.039-.008.059-.014.055-.017.113-.024.169-.041.016-.006.035-.007.051-.012.044-.013.086-.032.129-.047s.063-.028.1-.041l.026-.01c.214-.076.417-.175.627-.261s.394-.154.584-.245c.047-.023.1-.036.142-.059.018-.009.04-.015.058-.024s.053-.02.078-.033.068-.04.1-.056l0,0c.056-.028.106-.069.161-.1a12.341,12.341,0,0,0,1.132-.695c.029-.02.062-.035.092-.056.008-.006.017-.009.024-.015.035-.026.076-.043.11-.068l236.3-171.666A30.6,30.6,0,0,0,510.486,284.482ZM408.8,49.48l46.342,142.674H362.46Zm-305.6,0,46.428,142.675H56.948ZM26.817,299.251a6.526,6.526,0,0,1-2.361-7.308l20.34-62.42L193.835,420.6Zm38.245-82.972h92.411L223.354,419.22Zm183.416,273.83c-.047-.038-.092-.079-.138-.118-.009-.008-.018-.018-.028-.026-.091-.075-.18-.152-.268-.231-.172-.15-.341-.3-.5-.462.014.012.029.022.043.035l.055.046a12.191,12.191,0,0,0,1.091.929l.012.011c.018.013.033.03.051.045C248.689,490.263,248.58,490.19,248.478,490.109Zm7.514-48.482L217.226,322.21,182.839,216.279H329.253Zm7.935,48.107c-.091.079-.178.157-.27.233l-.032.028c-.047.038-.091.079-.136.117-.1.08-.209.152-.313.229.018-.013.033-.032.053-.044l.009-.009a11.69,11.69,0,0,0,1.086-.926c.014-.013.03-.024.044-.036s.038-.03.054-.047C264.262,489.435,264.1,489.586,263.927,489.734Zm90.7-273.455h92.4l-18.91,24.23-139.468,178.7Zm130.567,82.967L318.2,420.563,467.284,229.538l20.258,62.393A6.528,6.528,0,0,1,485.189,299.246Z"/></svg>
+
+  </span>
+
+
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          React Native Developer 
+        </h2>
+        
+        
+        <h3 class="">
+          <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Jan. 2025 - Present
+  </span>
+</span>
+        </h3>
+        
+      </div>
+      
+      <h4 class="mt-0">
+        Remote
+      </h4>
+      
+      <div class="mb-6">
+I'm currently working remotely as a React Native developer, building performant and scalable cross-platform mobile apps.
+
+<ul>
+  <li>Developing mobile applications for both Android and iOS using React Native and TypeScript.</li>
+  <li>Integrating RESTful APIs and optimizing performance for mobile environments.</li>
+  <li>Implementing CI/CD pipelines with tools like GitHub Actions and EAS.</li>
+  <li>Writing reusable code components and maintaining consistent UI across platforms with styled-components and Tailwind-like libraries.</li>
+  <li>Collaborating asynchronously with designers and backend engineers across different time zones.</li>
+</ul>
+</div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<li>
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+<path fill="currentColor" d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+  </span>
+
+
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          Freelancer 
+        </h2>
+        
+        
+        <h3 class="">
+          <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Jan. 2024 - Present
+  </span>
+</span>
+        </h3>
+        
+      </div>
+      
+      <h4 class="mt-0">
+        Upwork
+      </h4>
+      
+      <div class="mb-6">
+I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma, Neon Serverless, MongoDB, and Appwrite. I'm open to full-time opportunities.
+
+<ul>
+  <li>Delivered full-stack web applications with dynamic UIs and REST/GraphQL integrations.</li>
+  <li>Worked on client dashboards, e-commerce platforms, and portfolio sites with modern stacks.</li>
+  <li>Wrote technical documentation and client onboarding guides to streamline handover.</li>
+  <li>Maintained high client satisfaction through clear communication and on-time delivery.</li>
+</ul>
+</div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<li>
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M287.9 0C297.1 0 305.5 5.25 309.5 13.52L378.1 154.8L531.4 177.5C540.4 178.8 547.8 185.1 550.7 193.7C553.5 202.4 551.2 211.9 544.8 218.2L433.6 328.4L459.9 483.9C461.4 492.9 457.7 502.1 450.2 507.4C442.8 512.7 432.1 513.4 424.9 509.1L287.9 435.9L150.1 509.1C142.9 513.4 133.1 512.7 125.6 507.4C118.2 502.1 114.5 492.9 115.1 483.9L142.2 328.4L31.11 218.2C24.65 211.9 22.36 202.4 25.2 193.7C28.03 185.1 35.5 178.8 44.49 177.5L197.7 154.8L266.3 13.52C270.4 5.249 278.7 0 287.9 0L287.9 0zM287.9 78.95L235.4 187.2C231.9 194.3 225.1 199.3 217.3 200.5L98.98 217.9L184.9 303C190.4 308.5 192.9 316.4 191.6 324.1L171.4 443.7L276.6 387.5C283.7 383.7 292.2 383.7 299.2 387.5L404.4 443.7L384.2 324.1C382.9 316.4 385.5 308.5 391 303L476.9 217.9L358.6 200.5C350.7 199.3 343.9 194.3 340.5 187.2L287.9 78.95z"/></svg>
+  </span>
+
+
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          Frontend Developer 
+        </h2>
+        
+        
+        <h3 class="">
+          <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Sept. 2023 - Jun. 2024
+  </span>
+</span>
+        </h3>
+        
+      </div>
+      
+      <h4 class="mt-0">
+        Remote
+      </h4>
+      
+      <div class="mb-6">
+I worked as a front-end developer for various clients. I also upskilled to the full stack.
+
+<ul>
+  <li>Developed and maintained web applications using React.js and other related technologies.</li>
+  <li>Collaborated with designers and PMs to ship responsive, production-ready UIs.</li>
+  <li>Converted Figma mockups into pixel-perfect components using Tailwind CSS.</li>
+  <li>Improved app performance and accessibility based on Lighthouse and Web Vitals.</li>
+  <li>Started backend work with Node.js, Express, and MongoDB for simple APIs.</li>
+</ul>
+</div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<li>
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M80 104c13.3 0 24-10.7 24-24s-10.7-24-24-24S56 66.7 56 80s10.7 24 24 24zm80-24c0 32.8-19.7 61-48 73.3V192c0 17.7 14.3 32 32 32H304c17.7 0 32-14.3 32-32V153.3C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V192c0 53-43 96-96 96H256v70.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V288H144c-53 0-96-43-96-96V153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm208 24c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24zM248 432c0-13.3-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24s24-10.7 24-24z"/></svg>
+  </span>
+
+
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          Graduated bootcamp 
+        </h2>
+        
+        
+        <h3 class="">
+          <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Aug. 2022- Sept. 2023
+  </span>
+</span>
+        </h3>
+        
+      </div>
+      
+      <h4 class="mt-0">
+        Nairobi, KE
+      </h4>
+      
+      <div class="mb-6">
+I graduated after 12 months of studying with ALX Africa, a project-based remote learning program emphasizing pair programming and hands-on mastery of HTML, CSS, C, JavaScript, Python, React, MySQL, and Nginx. Collaborating with developers across Africa strengthened my technical and teamwork skills.
+
+<ul>
+  <li>Built a portfolio of backend and frontend projects hosted on GitHub.</li>
+  <li>Led peer programming sessions and reviewed teammates’ code.</li>
+  <li>Deployed static and dynamic web apps using Netlify, Heroku, and custom Nginx configs.</li>
+  <li>Passed over 100 project checkpoints and final technical interview assessments.</li>
+</ul>
+</div>
+    </div>
+  </div>
+</li>
+
+
+</ol>
 
 
 <h2 class="relative group">Outside of Tech 
@@ -493,37 +1196,8 @@
     </span>        
     
 </h2>
-<p>Beyond tech, I’m into overlanding and love following travelers’ journeys. Photography is another passion, and I&rsquo;m always trying to capture the beauty I see through my lens.</p>
-<p>These interests let me explore the world in different ways, both online and behind the camera.</p>
-
-
-<h2 class="relative group">This Site 
-    <div id="this-site" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#this-site" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>Over the years, my blog has undergone a couple of changes. Initially, I made it with good ol&rsquo; HTML, tried WordPress and Medium. Later, I started to use a couple of templates and making customizations to align with my personal style.</p>
-<p>Currently, this site is built using <a href="https://gohugo.io/"title="The world’s fastest framework for building websites" target="_blank">Hugo</a> static site generator and <a href="https://blowfish.page/"title="A powerful, lightweight theme for Hugo built with Tailwind CSS." target="_blank">Blowfish</a>.</p>
-
-
-<h2 class="relative group">Privacy and Copyrights 
-    <div id="privacy-and-copyrights" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#privacy-and-copyrights" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>This site makes use of GoatCounter which is an open-source and privacy-friendly web analytics platform. No cookies or ads are in place.</p>
-<p>You are welcome to use any content of this website provided you give appropriate credit to me and refrain from using it for commercial purposes as this site is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a> license.</p>
-<!-- organise alphabetically -->
+<p>I&rsquo;m drawn to overlanding and enjoy following the journeys of adventurous travellers. I&rsquo;m also passionate about photography, always seeking to capture the world&rsquo;s splendor through my lens. These interests provide a rich tapestry of experiences and perspectives, allowing me to explore the globe both digitally and artistically.</p>
+<p>Besides, I love learning foreign languages. It’s another way I connect with diverse cultures and broaden my worldview. Just as photography captures moments, language captures meaning, and both deepen my appreciation of the human experience.</p>
 
           
           
