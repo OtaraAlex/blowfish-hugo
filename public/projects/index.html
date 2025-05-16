@@ -101,7 +101,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "249"
+    "wordCount": "244"
   }]
   </script>
 
@@ -199,6 +199,28 @@
         <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
 
             
+            
+            
+  <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="About">
+        About
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/projects/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="Projects">
+        Projects
+    </p>
+</a>
+
+
+
             
             
   <a href="/playlists/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
@@ -345,6 +367,36 @@
 
                     
   <li class="mt-1">
+    <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="About">
+            About
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/projects/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="Projects">
+            Projects
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
     <a href="/playlists/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-bg font-bg" title="My Playlists">
@@ -472,11 +524,15 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#i-restate">i. Restate</a></li>
-    <li><a href="#ii-bookwise">ii. Bookwise</a></li>
-    <li><a href="#iii-readblendr">iii. Readblendr</a></li>
-    <li><a href="#iv-snapvista">iv. Snapvista</a></li>
-    <li><a href="#v-evently">v. Evently</a></li>
+    <li>
+      <ul>
+        <li><a href="#restate">Restate</a></li>
+        <li><a href="#bookwise">Bookwise</a></li>
+        <li><a href="#readblendr">Readblendr</a></li>
+        <li><a href="#snapvista">Snapvista</a></li>
+        <li><a href="#evently">Evently</a></li>
+      </ul>
+    </li>
     <li><a href="#want-to-see-more-or-contribute">Want to see more or contribute?</a></li>
   </ul>
 </nav>
@@ -491,11 +547,15 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#i-restate">i. Restate</a></li>
-    <li><a href="#ii-bookwise">ii. Bookwise</a></li>
-    <li><a href="#iii-readblendr">iii. Readblendr</a></li>
-    <li><a href="#iv-snapvista">iv. Snapvista</a></li>
-    <li><a href="#v-evently">v. Evently</a></li>
+    <li>
+      <ul>
+        <li><a href="#restate">Restate</a></li>
+        <li><a href="#bookwise">Bookwise</a></li>
+        <li><a href="#readblendr">Readblendr</a></li>
+        <li><a href="#snapvista">Snapvista</a></li>
+        <li><a href="#evently">Evently</a></li>
+      </ul>
+    </li>
     <li><a href="#want-to-see-more-or-contribute">Want to see more or contribute?</a></li>
   </ul>
 </nav>
@@ -529,6 +589,44 @@
 
 
 
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
 </script>
    </div>
       </div>
@@ -543,10 +641,10 @@
           <p>I&rsquo;ve embarked on numerous projects throughout the years but these listed below are held closer to my heart. Some of them are open-source and I would like to invite you to contribute to those that pique your interest. Your collaboration is highly appreciated!</p>
 
 
-<h2 class="relative group">i. Restate 
-    <div id="i-restate" class="anchor"></div>
+<h3 class="relative group">Restate 
+    <div id="restate" class="anchor"></div>
     
-</h2>
+</h3>
 <p>This is a full-stack Real Estate mobile app with React Native, featuring Google authentication, dynamic property listings, and user profiles. Designed with modern tools like Expo SDK 52, Appwrite, Tailwind CSS, and TypeScript for a seamless and scalable experience.</p>
 <div class="flex flex-wrap gap-4">
     
@@ -613,10 +711,10 @@
 </p>
 
 
-<h2 class="relative group">ii. Bookwise 
-    <div id="ii-bookwise" class="anchor"></div>
+<h3 class="relative group">Bookwise 
+    <div id="bookwise" class="anchor"></div>
     
-</h2>
+</h3>
 <p>Bookwise is a Library Management System featuring a public-facing app and an admin interface. It offers advanced functionalities like seamless book borrowing with reminders and receipts, robust user management, automated workflows, and a modern, optimized tech stack for real-world scalability.</p>
 <div class="flex flex-wrap gap-4">
     
@@ -705,10 +803,10 @@
 </p>
 
 
-<h2 class="relative group">iii. Readblendr 
-    <div id="iii-readblendr" class="anchor"></div>
+<h3 class="relative group">Readblendr 
+    <div id="readblendr" class="anchor"></div>
     
-</h2>
+</h3>
 <p>A platform for authors to publish and sell their books. It also acts as a marketplace for readers to buy and read.</p>
 <div class="flex flex-wrap gap-4">
     
@@ -797,10 +895,10 @@
 </p>
 
 
-<h2 class="relative group">iv. Snapvista 
-    <div id="iv-snapvista" class="anchor"></div>
+<h3 class="relative group">Snapvista 
+    <div id="snapvista" class="anchor"></div>
     
-</h2>
+</h3>
 <p>A Software-as-a-Service application with AI features and a payments &amp; credits system where one can manipulate images.</p>
 <div class="flex flex-wrap gap-4">
     
@@ -900,10 +998,10 @@
 </p>
 
 
-<h2 class="relative group">v. Evently 
-    <div id="v-evently" class="anchor"></div>
+<h3 class="relative group">Evently 
+    <div id="evently" class="anchor"></div>
     
-</h2>
+</h3>
 <p>An event management application where one can create and book events. Events are filtered by category.</p>
 <div class="flex flex-wrap gap-4">
     

@@ -15,7 +15,7 @@ showPagination: false
 
 I've embarked on numerous projects throughout the years but these listed below are held closer to my heart. Some of them are open-source and I would like to invite you to contribute to those that pique your interest. Your collaboration is highly appreciated!
 
-## i. Restate
+### Restate
 This is a full-stack Real Estate mobile app with React Native, featuring Google authentication, dynamic property listings, and user profiles. Designed with modern tools like Expo SDK 52, Appwrite, Tailwind CSS, and TypeScript for a seamless and scalable experience.
 
 <div class="flex flex-wrap gap-4">
@@ -27,7 +27,7 @@ This is a full-stack Real Estate mobile app with React Native, featuring Google 
 
 ![Abstract purple artwork](img/realestate.png "[Live Link](https://github.com/OtaraAlex/native_realestate)")
 
-## ii. Bookwise
+### Bookwise
 Bookwise is a Library Management System featuring a public-facing app and an admin interface. It offers advanced functionalities like seamless book borrowing with reminders and receipts, robust user management, automated workflows, and a modern, optimized tech stack for real-world scalability.
 
 <div class="flex flex-wrap gap-4">
@@ -41,7 +41,7 @@ Bookwise is a Library Management System featuring a public-facing app and an adm
 
 ![Abstract purple artwork](img/bookwise.jpeg "[Live Link](https://weatbookwise.vercel.app/)")
 
-## iii. Readblendr
+### Readblendr
 A platform for authors to publish and sell their books. It also acts as a marketplace for readers to buy and read.
 <div class="flex flex-wrap gap-4">
     {{< keyword >}} Next.js {{< /keyword >}}
@@ -54,7 +54,7 @@ A platform for authors to publish and sell their books. It also acts as a market
 
 ![Abstract purple artwork](img/readblendr.jpeg "[Live Link](https://readblendr.vercel.app)")
 
-## iv. Snapvista
+### Snapvista
 A Software-as-a-Service application with AI features and a payments & credits system where one can manipulate images.
 <div class="flex flex-wrap gap-4">
     {{< keyword >}} Next.js {{< /keyword >}}
@@ -68,7 +68,7 @@ A Software-as-a-Service application with AI features and a payments & credits sy
 
 ![Abstract purple artwork](img/snapvista.jpeg "[Live Link](https://snapvistaa.vercel.app/)")
 
-## v. Evently
+### Evently
 An event management application where one can create and book events. Events are filtered by category.
 <div class="flex flex-wrap gap-4">
     {{< keyword >}} Next.js {{< /keyword >}}
