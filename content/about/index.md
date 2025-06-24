@@ -51,9 +51,15 @@ Check out my **[projects]({{< ref "projects/index.md" >}})**
 ## My Certificates
 
 {{< figure
-    src="img/se.png"
-    alt="Alex Mbeche certificate for Short Specializations"
-    caption="Software Engineering [Certificate](https://savanna.alxafrica.com/certificates/ERXCf5h8H6)"
+  src="img/se.png"
+  alt="Alex Mbeche certificate for Short Specializations"
+  caption="Software Engineering [Certificate](https://savanna.alxafrica.com/certificates/ERXCf5h8H6)"
+>}}
+
+{{< figure
+  src="img/stanford-do.png"
+  alt="Abstract purple artwork"
+  caption="Stanford Data Ocean [Certificate](https://deepdata.stanford.edu/certificate-programs/)"
 >}}
 
 ![Abstract purple artwork](img/ai-starter-kit.png "AI Starter Kit [Certificate](https://savanna.alxafrica.com/certificates/Mn3hfxPem7)")
